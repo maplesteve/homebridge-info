@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <h2>homebridg-info example client</h2>
+        Open the Javascript console to see the output.
+        <script>
+            var eventSource = new EventSource('http://127.0.0.1:9876/api/info');
+
+            eventSource.addEventListener('message', function(e) {
+                var result = JSON.parse(e.data);
+                console.log("got message: " + JSON.stringify(result));
+            }, false);
+        </script>
+    </body>
+</html>

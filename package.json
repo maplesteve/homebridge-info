@@ -1,0 +1,37 @@
+{
+  "name": "homebridge-info",
+  "version": "1.0.0",
+  "description": "Plugin for homebridge providing stats about the running instance.",
+  "license": "MIT",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maplesteve/homebridge-info.git"
+  },
+  "bugs": {
+    "url": "http://github.com/maplesteve/homebridge-info/issues"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "homebridge": ">=0.4.9",
+    "semver": "^5.3.0"
+  },
+  "scripts": {
+    "test": ". ./scripts/performTests.sh"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eventsource": "^0.2.1",
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
+  },
+  "homepage": "https://github.com/maplesteve/homebridge-info#readme",
+  "main": "index.js",
+  "author": "Stephan Esch"
+}
