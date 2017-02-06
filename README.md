@@ -1,4 +1,5 @@
-# homebridge-info
+# homebridge-info [![Build Status](https://travis-ci.org/maplesteve/homebridge-info.svg?branch=master)](https://travis-ci.org/maplesteve/homebridge-info)
+
 Plugin for [homebridge](https://github.com/nfarina/homebridge/) providing stats about the running instance.
 
 homebridge-info acts as a server, that emits several infos about the homebridge instance. You can subscribe and display these in the browser frontend.
