@@ -16,6 +16,8 @@ if [ $HBC ]; then
     HOMEBRIDGE_CONFIG=$HBC
 fi
 
+echo "Installing homebridge-info (npm install . -g)"
+npm install . -g
 
 echo "Starting homebridge with test config..."
 # Stop running homebridge instances
