@@ -17,7 +17,8 @@ if [ $HBC ]; then
 fi
 
 echo "Installing homebridge-info (npm install . -g)"
-npm install . -g
+sudo npm install . -g
+EXIT1=$?
 
 echo "Starting homebridge with test config..."
 # Stop running homebridge instances
@@ -51,11 +52,11 @@ echo "========"
 
 echo "1) Lint"
 eslint ./*.js
-EXIT1=$?
+EXIT2=$?
 
 echo "2) mocha"
 ./node_modules/mocha/bin/mocha
-EXIT2=$?
+EXIT3=$?
 
 
 
@@ -65,5 +66,5 @@ killall homebridge
 rm -rf $TEST_CONFIG_DIR
 
 # Add up the exit codes and return
-EXITCODE=$(expr $EXIT1 + $EXIT2)
+EXITCODE=$(expr $EXIT1 + $EXIT2 + $EXIT3)
 exit $EXITCODE
