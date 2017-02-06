@@ -33,7 +33,7 @@ function InfoPlatform(log, config) {
 
 
     var path = require('path');
-    var BridgeInfoEmitter = require(path.resolve(require.resolve('./BridgeInfoEmitter')));
+    var BridgeInfoEmitter = require(path.resolve(require.resolve('./lib/HomebridgeInfoEmitter/BridgeInfoEmitter.js')));
     var infoEmitter = BridgeInfoEmitter(config, HomebridgeAPI);
     infoEmitter.start();
 
