@@ -5,6 +5,7 @@ Plugin for [homebridge](https://github.com/nfarina/homebridge/) providing stats 
 homebridge-info acts as a server, that emits several infos about the homebridge instance. You can subscribe and display these in the browser frontend.
 
 Features:
+
 - Memory usage
 - Uptime
 - OS info
@@ -37,13 +38,13 @@ In the `platforms` section, add info to the array:
     - n = 60000 - every minute
     - n = 300000 - every 5 minutes
 
-    Don't set this too low. Default is 10000.
+    Don't set this too low. Default is 10000 (10 seconds).
 
 - **updateCheckFrequency** (number): The plugin will check for if an updated version of homebridge is available every n milliseconds, e.g.
     - n = 3600000 - once every hour
     - n = 86400000 - once a day
 
-    Don't set this too low. Default is 3600000.
+    Don't set this too low. Default is 3600000 (every hour).
 
 
 ## Usage
