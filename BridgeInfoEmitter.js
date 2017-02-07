@@ -2,6 +2,11 @@
 var inherits = require('util').inherits;
 var EventEmitter = require('events').EventEmitter;
 
+var lastUpdateCheckResult = {
+    "state": "unknown",
+    "latestVersion": "unknown"
+};
+
 module.exports = BridgeInfoEmitter;
 
 function BridgeInfoEmitter(options, homebridgeAPI) {
@@ -48,6 +53,10 @@ BridgeInfoEmitter.prototype.initialInfo = function initialData() {
     return gatherInfo(this._hbAPI);
 }
 
+BridgeInfoEmitter.prototype.lastUpdateCheck = function lastUpdateCheck() {
+    return lastUpdateCheckResult;
+}
+
 
 // BridgeInfo
 function emitInfo(emitter) {
@@ -89,6 +98,7 @@ function emitUpdateCheck(emitter) {
                 "latestVersion": version
             };
         }
+        lastUpdateCheckResult = bridgeUpdateAvailable;
         emitter.emit('bridgeUpdateAvailable', bridgeUpdateAvailable);
         setTimeout(function() {
             emitUpdateCheck(emitter);
