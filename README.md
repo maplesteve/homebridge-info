@@ -1,4 +1,4 @@
-# homebridge-info [![Build Status](https://travis-ci.org/maplesteve/homebridge-info.svg?branch=master)](https://travis-ci.org/maplesteve/homebridge-info)
+# homebridge-info [![Build Status](https://travis-ci.org/maplesteve/homebridge-info.svg?branch=master)](https://travis-ci.org/maplesteve/homebridge-info) [![npm version](https://badge.fury.io/js/homebridge-info.svg)](https://badge.fury.io/js/homebridge-info)
 
 Plugin for [homebridge](https://github.com/nfarina/homebridge/) providing stats about the running instance.
 
