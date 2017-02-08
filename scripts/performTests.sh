@@ -17,7 +17,11 @@ if [ $HBC ]; then
 fi
 
 echo "Installing homebridge-info (npm install . -g)"
-sudo npm install . -g
+if [[ $TRAVIS ]]; then
+    npm install . -g
+else
+    sudo npm install . -g
+fi
 EXIT1=$?
 
 echo "Starting homebridge with test config..."
