@@ -79,6 +79,10 @@ To receive events, add a listener to `eventSource`:
 See `test.html` for an example browser client.
 
 ## Changes
+### v1.1.0
+- Use updated emitter lib
+- Emit initial update check data
+
 ### v1.0.0
 - first Release
 

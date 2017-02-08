@@ -43,6 +43,7 @@ function InfoPlatform(log, config) {
         // Send the current data to the client so he doesn't have to
         // wait for the next update before he get's something.
         res.write("data: " + JSON.stringify({'type': 'bridgeInfo', 'data': infoEmitter.initialInfo()}) + "\n\n");
+        res.write("data: " + JSON.stringify({'type': 'bridgeUpdateAvailable', 'data': infoEmitter.lastUpdateCheck()}) + "\n\n");
 
         // From here we'll write whenever the emitter has something to say...
         infoEmitter.on('bridgeInfo', function(data) {
