@@ -20,6 +20,12 @@ function InfoPlatform(log, config) {
 
     function handleRequest(req, res) {
         log("handleAPIRequest: " + req.url);
+
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Request-Method', '*');
+        res.setHeader('Access-Control-Allow-Methods', '*');
+        res.setHeader('Access-Control-Allow-Headers', '*');
+
         var path = require('url').parse(req.url).pathname;
         switch (path) {
             case '/api/info':
